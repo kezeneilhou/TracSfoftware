@@ -14,7 +14,11 @@ class VehicleController extends Controller
      */
     public function index()
     {
-        //
+      $datas= Vehicle::all();
+      return view('backend.vehicles.index',[
+        'pageTitle' => 'Vehicles',
+        'datas' => $datas,
+      ]);
     }
 
     /**
@@ -35,7 +39,8 @@ class VehicleController extends Controller
      */
     public function store(Request $request)
     {
-        //
+        Vehicle::create($request->all());
+        return redirect()->back();
     }
 
     /**

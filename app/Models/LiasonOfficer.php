@@ -8,4 +8,6 @@ use Illuminate\Database\Eloquent\Model;
 class LiasonOfficer extends Model
 {
     use HasFactory;
+
+    protected $guarded=[];
 }

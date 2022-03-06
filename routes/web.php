@@ -22,3 +22,11 @@ Route::get('/dashboard', function () {
 })->middleware(['auth'])->name('dashboard');
 
 require __DIR__.'/auth.php';
+
+
+Route::group(['middelware' => 'Auth'],function(){
+  Route::resource('hotels',App\Http\Controllers\HotelsController::class);
+  Route::resource('liasonOfficer',App\Http\Controllers\LiasonOfficerController::class);
+  Route::resource('vehicles',App\Http\Controllers\VehicleController::class);
+  Route::resource('rooms',App\Http\Controllers\RoomController::class);
+});

@@ -14,7 +14,11 @@ class LiasonOfficerController extends Controller
      */
     public function index()
     {
-        //
+        $datas = LiasonOfficer::all();
+        return view('backend.liason.index',[
+          'datas' => $datas,
+          'pageTitle' => 'Liason Officers',
+        ]);
     }
 
     /**
@@ -35,7 +39,8 @@ class LiasonOfficerController extends Controller
      */
     public function store(Request $request)
     {
-        //
+      LiasonOfficer::create($request->all());
+      return redirect()->back();
     }
 
     /**

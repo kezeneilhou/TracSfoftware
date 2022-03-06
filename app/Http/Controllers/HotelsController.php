@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use App\Models\Hotels;
+use App\Models\LiasonOfficer;
 use Illuminate\Http\Request;
 
 class HotelsController extends Controller
@@ -14,7 +15,14 @@ class HotelsController extends Controller
      */
     public function index()
     {
-        //
+      $liason = LiasonOfficer::all();
+      $datas = Hotels::all();
+      return view('backend.hotels.index',[
+        'pageTitle' => 'Hotels',
+        'datas' => $datas,
+        'liason' => $liason,
+      ]);
+
     }
 
     /**
@@ -24,7 +32,7 @@ class HotelsController extends Controller
      */
     public function create()
     {
-        //
+        return view('backend.hotels.create');
     }
 
     /**
@@ -35,7 +43,8 @@ class HotelsController extends Controller
      */
     public function store(Request $request)
     {
-        //
+        Hotels::create($request->all());
+        return redirect()->back();
     }
 
     /**

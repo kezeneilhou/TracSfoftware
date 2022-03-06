@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use App\Models\Room;
+use App\Models\Hotels;
 use Illuminate\Http\Request;
 
 class RoomController extends Controller
@@ -14,7 +15,13 @@ class RoomController extends Controller
      */
     public function index()
     {
-        //
+      $datas = Room::all();
+      $hotels = Hotels::all();
+      return view('backend.rooms.index',[
+        'pageTitle' => 'Hotels',
+        'datas' => $datas,
+        'hotels' => $hotels,
+      ]);
     }
 
     /**
@@ -24,7 +31,8 @@ class RoomController extends Controller
      */
     public function create()
     {
-        //
+      Room::create($request->all());
+      return redirect()->back();
     }
 
     /**
@@ -35,7 +43,8 @@ class RoomController extends Controller
      */
     public function store(Request $request)
     {
-        //
+      Room::create($request->all());
+      return redirect()->back();
     }
 
     /**
