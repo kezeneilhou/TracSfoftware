@@ -34,7 +34,7 @@
 		<!--(remove-empty-lines-end)-->
 
 		<!-- Theme CSS -->
-		<link rel="stylesheet" href="{{asset('backend/css/theme.css" />
+		<link rel="stylesheet" href="{{asset('backend/css/theme.css')}}" />
 
 
 
