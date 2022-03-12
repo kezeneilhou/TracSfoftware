@@ -20,7 +20,7 @@ return new class extends Migration
             $table->string('email')->nullable();
             $table->string('designation')->nullable();
             $table->string('country')->nullable();
-            $table->string('liasom_id')->nullable();
+            $table->string('liason_id')->nullable();
             $table->string('hotel_id')->nullable();
             $table->string('room_id')->nullable();
             $table->string('driver_id')->nullable();

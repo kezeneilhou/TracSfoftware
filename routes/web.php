@@ -14,7 +14,7 @@ use Illuminate\Support\Facades\Route;
 */
 
 Route::get('/', function () {
-    return view('welcome');
+    return redirect()->route('login');
 });
 
 Route::get('/dashboard', function () {
@@ -29,4 +29,5 @@ Route::group(['middelware' => 'Auth'],function(){
   Route::resource('liasonOfficer',App\Http\Controllers\LiasonOfficerController::class);
   Route::resource('vehicles',App\Http\Controllers\VehicleController::class);
   Route::resource('rooms',App\Http\Controllers\RoomController::class);
+  Route::resource('applicants',App\Http\Controllers\ApplicantsController::class);
 });

@@ -9,16 +9,18 @@ class FormInput extends Component
     public $name;
     public $label;
     public $type;
+    public $col;
     /**
      * Create a new component instance.
      *
      * @return void
      */
-    public function __construct($name,$label,$type)
+    public function __construct($name,$label,$type,$col = '')
     {
         $this->name = $name;
         $this->label = $label;
         $this->type = $type;
+        $this->col = $col;
     }
 
     /**

@@ -35,11 +35,6 @@
 
 		<!-- Theme CSS -->
 		<link rel="stylesheet" href="{{asset('backend/css/theme.css')}}" />
-
-
-
-
-
 		<!-- Skin CSS -->
 		<link rel="stylesheet" href="{{asset('backend/css/skins/default.css')}}" />
 
@@ -47,8 +42,9 @@
 		<link rel="stylesheet" href="{{asset('backend/css/custom.css')}}">
 
 		<!-- Head Libs -->
+		<script src="{{asset('backend/vendor/jquery/jquery.js')}}"></script>
 		<script src="{{asset('backend/vendor/modernizr/modernizr.js')}}"></script>
-
+		@livewireStyles
 	</head>
 	<body>
 		<section class="body">
@@ -93,8 +89,12 @@
 									<a role="menuitem" tabindex="-1" href="#" data-lock-screen="true"><i class="bx bx-lock"></i> Lock Screen</a>
 								</li>
 								<li>
-									<a role="menuitem" tabindex="-1" href="pages-signin.html"><i class="bx bx-power-off"></i> Logout</a>
+									<a role="menuitem" tabindex="-1" href="{{ route('logout') }}"onclick="event.preventDefault(); document.getElementById('logout-form').submit();"><i class="bx bx-power-off"></i> Logout</a>
 								</li>
+
+								<form id="logout-form" action="{{ route('logout') }}" method="POST" style="display: one;">
+								    {{ csrf_field() }}
+								</form>
 							</ul>
 						</div>
 					</div>
@@ -129,8 +129,14 @@
 				                    </li>
 
 				                    <li>
+				                        <a class="nav-link" href="{{route('applicants.index')}}">
+				                            <i class="bx bx-user" aria-hidden="true"></i>
+				                            <span>Participants</span>
+				                        </a>
+				                    </li>
+				                    <li>
 				                        <a class="nav-link" href="{{route('hotels.index')}}">
-				                            <i class="bx bx-envelope" aria-hidden="true"></i>
+				                            <i class="bx bx-home" aria-hidden="true"></i>
 				                            <span>Hotels</span>
 				                        </a>
 				                    </li>
@@ -148,7 +154,7 @@
 				                    </li>
 				                    <li>
 				                        <a class="nav-link" href="{{route('vehicles.index')}}">
-				                            <i class="bx bx-envelope" aria-hidden="true"></i>
+				                            <i class="bx bx-car" aria-hidden="true"></i>
 				                            <span>Vehicles</span>
 				                        </a>
 				                    </li>
@@ -187,7 +193,7 @@
     </section>
 
     <!-- Vendor -->
-    <script src="{{asset('backend/vendor/jquery/jquery.js')}}"></script>
+
     <script src="{{asset('backend/vendor/jquery-browser-mobile/jquery.browser.mobile.js')}}"></script>
     <script src="{{asset('backend/vendor/popper/umd/popper.min.js')}}"></script>
     <script src="{{asset('backend/vendor/bootstrap/js/bootstrap.js')}}"></script>
@@ -227,5 +233,6 @@
     <script src="{{asset('backend/js/theme.init.js')}}"></script>
     <!-- Examples -->
     <script src="{{asset('backend/js/examples/examples.dashboard.js')}}"></script>
+		@livewireScripts
   </body>
 </html>

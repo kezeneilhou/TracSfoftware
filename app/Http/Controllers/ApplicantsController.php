@@ -3,6 +3,8 @@
 namespace App\Http\Controllers;
 
 use App\Models\Applicants;
+use App\Models\LiasonOfficer;
+use App\Models\Driver;
 use Illuminate\Http\Request;
 
 class ApplicantsController extends Controller
@@ -14,7 +16,15 @@ class ApplicantsController extends Controller
      */
     public function index()
     {
-        //
+      $datas = Applicants::all();
+      $liason = LiasonOfficer::all();
+      $driver = Driver::all();
+      return view('backend.applicants.index',[
+        'datas' => $datas,
+        'liason' => $liason,
+        'drivers' => $driver,
+        'pageTitle' => 'Participants Data',
+      ]);
     }
 
     /**
@@ -35,7 +45,8 @@ class ApplicantsController extends Controller
      */
     public function store(Request $request)
     {
-        //
+        Applicants::create($request->all());
+        return redirect()->back();
     }
 
     /**

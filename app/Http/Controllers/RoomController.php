@@ -18,7 +18,7 @@ class RoomController extends Controller
       $datas = Room::all();
       $hotels = Hotels::all();
       return view('backend.rooms.index',[
-        'pageTitle' => 'Hotels',
+        'pageTitle' => 'Rooms',
         'datas' => $datas,
         'hotels' => $hotels,
       ]);

@@ -1,4 +1,4 @@
-<section class="card mb-4">
+<section class="card mb-4 {{$display}}">
 	<header class="card-header">
 		<h2 class="card-title">{{$header}}</h2>
 	</header>

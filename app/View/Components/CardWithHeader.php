@@ -7,14 +7,16 @@ use Illuminate\View\Component;
 class CardWithHeader extends Component
 {
     public $header;
+    public $display;
     /**
      * Create a new component instance.
      *
      * @return void
      */
-    public function __construct($header)
+    public function __construct($header,$display='')
     {
         $this->header = $header;
+        $this->display = $display;
     }
 
     /**
