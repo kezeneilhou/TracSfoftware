@@ -17,7 +17,7 @@
 
 		<!-- Vendor CSS -->
 		<link rel="stylesheet" href="{{asset('backend/vendor/bootstrap/css/bootstrap.css')}}" />
-		<!-- <link rel="stylesheet" href="vendor/animate/animate.compat.css')}}"> -->
+		<link rel="stylesheet" href="vendor/animate/animate.compat.css')}}">
 
 		<link rel="stylesheet" href="{{asset('backend/vendor/font-awesome/css/all.min.css')}}" />
 		<link rel="stylesheet" href="{{asset('backend/vendor/boxicons/css/boxicons.min.css')}}" />
@@ -49,7 +49,7 @@
 		<section class="body-sign">
 			<div class="center-sign">
 				<a href="/" class="logo float-left">
-					<img src="{{ asset('img/trac_logo.png')}}" height="54" alt="Porto Admin" />
+					<img src="img/logo.png" height="54" alt="Porto Admin" />
 				</a>
 
 				<div class="panel card-sign">
@@ -107,7 +107,7 @@
 								<a class="btn btn-twitter mb-3 ml-1 mr-1" href="#">Connect with <i class="fab fa-twitter"></i></a>
 							</div>
 
-							<p class="text-center">Don't have an account yet? <a href="{{ route('register') }}">Sign Up!</a></p>
+							<p class="text-center">Don't have an account yet? <a href="pages-signup.html">Sign Up!</a></p>
 
 						</form>
 					</div>

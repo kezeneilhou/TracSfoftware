@@ -18,7 +18,7 @@
 
 		<!-- Vendor CSS -->
 		<link rel="stylesheet" href="{{asset('backend/vendor/bootstrap/css/bootstrap.css')}}" />
-		<link rel="stylesheet" href="{{asset('backend/vendor/animate/animate.compat.css')}}">
+		<!-- <link rel="stylesheet" href="{{asset('backend/vendor/animate/animate.compat.css')}}"> -->
 
 		<link rel="stylesheet" href="{{asset('backend/vendor/font-awesome/css/all.min.css')}}" />
 		<link rel="stylesheet" href="{{asset('backend/vendor/boxicons/css/boxicons.min.css')}}" />
