@@ -43,6 +43,13 @@
 
 		<!-- Head Libs -->
 		<script src="{{asset('backend/vendor/jquery/jquery.js')}}"></script>
+		<script src="https://cdn.datatables.net/1.11.5/js/jquery.dataTables.min.js"></script>
+		<script src="https://cdn.datatables.net/buttons/2.2.2/js/dataTables.buttons.min.js"></script>
+		<script src="https://cdnjs.cloudflare.com/ajax/libs/jszip/3.1.3/jszip.min.js"></script>
+		<script src="https://cdnjs.cloudflare.com/ajax/libs/pdfmake/0.1.53/pdfmake.min.js"></script>
+		<script src="https://cdnjs.cloudflare.com/ajax/libs/pdfmake/0.1.53/vfs_fonts.js"></script>
+		<script src="https://cdn.datatables.net/buttons/2.2.2/js/buttons.html5.min.js"></script>
+		<script src="https://cdn.datatables.net/buttons/2.2.2/js/buttons.print.min.js"></script>
 		<script src="{{asset('backend/vendor/modernizr/modernizr.js')}}"></script>
 		@livewireStyles
 	</head>
@@ -83,7 +90,7 @@
 							<ul class="list-unstyled mb-2">
 								<li class="divider"></li>
 								<li>
-									<a role="menuitem" tabindex="-1" href="pages-user-profile.html"><i class="bx bx-user-circle"></i> My Profile</a>
+									<a role="menuitem" tabindex="-1" href="#"><i class="bx bx-user-circle"></i> My Profile</a>
 								</li>
 								<li>
 									<a role="menuitem" tabindex="-1" href="#" data-lock-screen="true"><i class="bx bx-lock"></i> Lock Screen</a>
@@ -127,14 +134,13 @@
 				                            <span>Dashboard</span>
 				                        </a>
 				                    </li>
-
-				                    <li>
-				                        <a class="nav-link" href="{{route('applicants.index')}}">
-				                            <i class="bx bx-user" aria-hidden="true"></i>
-				                            <span>Participants</span>
+														<li>
+				                        <a class="nav-link" href="{{route('liasonOfficer.index')}}">
+				                            <i class="bx bx-envelope" aria-hidden="true"></i>
+				                            <span>Liason Officer</span>
 				                        </a>
 				                    </li>
-				                    <li>
+														<li>
 				                        <a class="nav-link" href="{{route('hotels.index')}}">
 				                            <i class="bx bx-home" aria-hidden="true"></i>
 				                            <span>Hotels</span>
@@ -147,15 +153,15 @@
 				                        </a>
 				                    </li>
 				                    <li>
-				                        <a class="nav-link" href="{{route('liasonOfficer.index')}}">
-				                            <i class="bx bx-envelope" aria-hidden="true"></i>
-				                            <span>Liason</span>
-				                        </a>
-				                    </li>
-				                    <li>
 				                        <a class="nav-link" href="{{route('vehicles.index')}}">
 				                            <i class="bx bx-car" aria-hidden="true"></i>
 				                            <span>Vehicles</span>
+				                        </a>
+				                    </li>
+				                    <li>
+				                        <a class="nav-link" href="{{route('applicants.index')}}">
+				                            <i class="bx bx-user" aria-hidden="true"></i>
+				                            <span>Participants</span>
 				                        </a>
 				                    </li>
 				                </ul>
@@ -234,5 +240,16 @@
     <!-- Examples -->
     <script src="{{asset('backend/js/examples/examples.dashboard.js')}}"></script>
 		@livewireScripts
+
+		<script type="text/javascript">
+			$(document).ready(function(){
+				$('.datatable').DataTable({
+				dom: 'Bfrtip',
+				buttons: [
+        	'copy','csv', 'print', 'pdfHtml5'
+    		]
+				});
+			});
+		</script>
   </body>
 </html>

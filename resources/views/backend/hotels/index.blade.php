@@ -21,7 +21,7 @@
       <x-card-with-header header="Hotels">
         <div class="col-md-9">
           <div class="table-responsive">
-            <table class="table table-striped table-sm">
+            <table class="table table-striped table-sm datatable">
               <thead>
                 <tr>
                   <th>Hotel Name</th>

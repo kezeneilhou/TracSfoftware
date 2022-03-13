@@ -7,7 +7,7 @@
         <form class="" action="{{route('vehicles.store')}}" method="post">
           @csrf
           <x-form-input type="text" name="type" label="Vehicle Type *" required/>
-          <x-form-input type="text" name="licence_number" label="License No. *" required/>
+          <x-form-input type="text" name="licence_number" label="Vehicle No. *" required/>
           <x-form-input type="text" name="department" label="Department *" required/>
           <button type="submit" class="btn btn-primary btn-sm mt-4">Submit</button>
         </form>
@@ -17,11 +17,11 @@
       <x-card-with-header header="Vehicles">
         <div class="col-md-9">
           <div class="table-responsive">
-            <table class="table table-striped table-sm">
+            <table class="table table-striped table-sm datatable">
               <thead>
                 <tr>
                   <th>Vehicle Type</th>
-                  <th>Licence Number</th>
+                  <th>Vehicle Number</th>
                   <th>Department</th>
                 </tr>
               </thead>
