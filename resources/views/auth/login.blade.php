@@ -57,6 +57,7 @@
 						<h2 class="title text-uppercase font-weight-bold m-0"><i class="bx bx-user-circle mr-1 text-6 position-relative top-5"></i> Sign In</h2>
 					</div>
 					<div class="card-body">
+            <x-auth-validation-errors class="mb-4" :errors="$errors" />
 						<form action="{{route('login')}}" method="post">
               @csrf
 							<div class="form-group mb-3">
@@ -72,12 +73,12 @@
 							</div>
 
 							<div class="form-group mb-3">
-								<div class="clearfix">
+								<!-- <div class="clearfix">
 									<label class="float-left">Password</label>
 									<a href="pages-recover-password.html" class="float-right">Lost Password?</a>
-								</div>
+								</div> -->
 								<div class="input-group">
-									<input name="pwd" type="password" class="form-control form-control-lg" />
+									<input name="password" type="password" class="form-control form-control-lg" />
 									<span class="input-group-append">
 										<span class="input-group-text">
 											<i class="bx bx-lock text-4"></i>
