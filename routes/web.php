@@ -30,4 +30,5 @@ Route::group(['middelware' => 'Auth'],function(){
   Route::resource('vehicles',App\Http\Controllers\VehicleController::class);
   Route::resource('rooms',App\Http\Controllers\RoomController::class);
   Route::resource('applicants',App\Http\Controllers\ApplicantsController::class);
+  Route::resource('driver',App\Http\Controllers\DriverController::class);
 });

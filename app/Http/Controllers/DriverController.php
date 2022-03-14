@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use App\Models\Driver;
 use Illuminate\Http\Request;
+use App\Models\Vehicle;
 
 class DriverController extends Controller
 {
@@ -14,7 +15,13 @@ class DriverController extends Controller
      */
     public function index()
     {
-        //
+      $datas = Driver::all();
+      $vehicles = Vehicle::all();
+      return view('backend.drivers.index',[
+        'datas' => $datas,
+        'vehicles' => $vehicles,
+        'pageTitle' => 'Driver Data',
+      ]);
     }
 
     /**
@@ -35,7 +42,8 @@ class DriverController extends Controller
      */
     public function store(Request $request)
     {
-        //
+      Driver::create($request->all());
+      return redirect()->back();
     }
 
     /**

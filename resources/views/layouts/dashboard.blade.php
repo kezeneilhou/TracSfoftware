@@ -161,6 +161,12 @@
 				                        </a>
 				                    </li>
 				                    <li>
+				                        <a class="nav-link" href="{{route('driver.index')}}">
+				                            <i class="bx bx-car" aria-hidden="true"></i>
+				                            <span>Drivers</span>
+				                        </a>
+				                    </li>
+				                    <li>
 				                        <a class="nav-link" href="{{route('applicants.index')}}">
 				                            <i class="bx bx-user" aria-hidden="true"></i>
 				                            <span>Participants</span>

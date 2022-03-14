@@ -32,7 +32,7 @@
               <tbody>
                 @foreach($datas as $data)
                 <tr>
-                  <td>{{$data->hotel_id}}</td>
+                  <td>{{$data->roomHotel->name}}</td>
                   <td>{{$data->room_no}}</td>
                   <td>{{$data->room_type}}</td>
                 </tr>

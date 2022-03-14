@@ -27,6 +27,7 @@
                   <th>Hotel Name</th>
                   <th>Hotel Contact</th>
                   <th>Hotel Liason</th>
+                  <th>Liason Contact</th>
                 </tr>
               </thead>
               <tbody>
@@ -34,7 +35,8 @@
                 <tr>
                   <td>{{$data->name}}</td>
                   <td>{{$data->contact}}</td>
-                  <td>{{$data->liason_id}}</td>
+                  <td>{{$data->hotelLo->name}}</td>
+                  <td>{{$data->hotelLo->contact}}</td>
                 </tr>
                 @endforeach
               </tbody>
