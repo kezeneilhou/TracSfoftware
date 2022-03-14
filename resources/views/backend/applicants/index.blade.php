@@ -71,6 +71,7 @@
                   <td>{{$data->appDriver->name}}</td>
                   <td>{{$data->appDriver->contact}}</td>
                   <td>{{$data->appDriver->driverVehicle->licence_number}}</td>
+                  <td>{{$data->appDriver->driverVehicle->type}}</td>
                   <td>{{$data->arrival_date}}</td>
                   <td>{{$data->departure_date}}</td>
                 </tr>
