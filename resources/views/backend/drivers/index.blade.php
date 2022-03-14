@@ -39,7 +39,7 @@
                   <td>{{$data->contact}}</td>
                   <td>{{$data->department}}</td>
                   <td>{{$data->driverVehicle->type}}</td>
-                  <td>{{$data->driverVehicle->license_number}}</td>
+                  <td>{{$data->driverVehicle->licence_number}}</td>
                 </tr>
                 @endforeach
               </tbody>
