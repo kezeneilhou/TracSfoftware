@@ -13,8 +13,8 @@
             <x-form-input type="email" name="email" label="Email *" col="4"/>
             <x-form-input type="text" name="designation" label="Designation *" col="4"/>
             <x-form-input type="text" name="country" label="Country *" col="4"/>
-            <x-form-input type="text" name="arrival_date" label="Arrival date *" col="4"/>
-            <x-form-input type="text" name="departure_date" label="Departure date *" col="4"/>
+            <x-form-datepicker type="text" name="arrival_date" label="Arrival date *" col="4"/>
+            <x-form-datepicker type="text" name="departure_date" label="Departure date *" col="4"/>
             <x-form-select name="liason_id" label="Liason Officer" col="4">
               @foreach($liason as $item)
               <option value="{{$item->id}}">{{$item->name}}</option>
