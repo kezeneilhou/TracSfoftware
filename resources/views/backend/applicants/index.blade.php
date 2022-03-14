@@ -32,7 +32,7 @@
         </form>
       </x-card-with-header>
     </div>
-    <div class="col-md-9">
+    <div class="col-md-12">
       <x-card-with-header header="Participants">
         <div class="col-md-9">
           <div class="table-responsive">
