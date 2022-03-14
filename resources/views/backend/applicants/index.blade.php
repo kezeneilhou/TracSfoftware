@@ -34,7 +34,7 @@
     </div>
     <div class="col-md-12">
       <x-card-with-header header="Participants">
-        <div class="col-md-9">
+        <div class="col-md-12">
           <div class="table-responsive">
             <table class="table table-striped table-sm datatable">
               <thead>
