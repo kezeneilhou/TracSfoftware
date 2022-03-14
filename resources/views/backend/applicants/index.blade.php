@@ -44,10 +44,14 @@
                   <th>Email</th>
                   <th>Designation</th>
                   <th>Country</th>
-                  <th>Liason Officer</th>
+                  <th>Liason Officer (LO)</th>
+                  <th>LO Contact</th>
                   <th>Hotel</th>
                   <th>Room No.</th>
                   <th>Driver</th>
+                  <th>Driver Contact</th>
+                  <th>Vehicle No</th>
+                  <th>Vehicle Type</th>
                   <th>Arrival Date</th>
                   <th>Departure Date</th>
                 </tr>
@@ -60,10 +64,13 @@
                   <td>{{$data->email}}</td>
                   <td>{{$data->designation}}</td>
                   <td>{{$data->country}}</td>
-                  <td>{{$data->liason_id}}</td>
-                  <td>{{$data->hotel_id}}</td>
-                  <td>{{$data->room_id}}</td>
-                  <td>{{$data->driver_id}}</td>
+                  <td>{{$data->appLiason->name}}</td>
+                  <td>{{$data->appLiason->contact}}</td>
+                  <td>{{$data->appHotel->name}}</td>
+                  <td>{{$data->appRoom->room_no}}</td>
+                  <td>{{$data->appDriver->name}}</td>
+                  <td>{{$data->appDriver->contact}}</td>
+                  <td>{{$data->appDriver->driverVehicle->licence_number}}</td>
                   <td>{{$data->arrival_date}}</td>
                   <td>{{$data->departure_date}}</td>
                 </tr>
